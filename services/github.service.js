@@ -10,6 +10,7 @@ export const getUserRepos = async (username) => {
   return response.data;
 };
 
+
 export const getUserFollowers = async (username) => {
   const response = await axios.get(`https://api.github.com/users/${username}/followers`);
   return response.data;

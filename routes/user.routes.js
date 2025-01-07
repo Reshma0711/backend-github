@@ -38,7 +38,7 @@ router.put(
   [
     param("username").isString().trim().notEmpty(),
     body("location").optional().isString(),
-    body("blog").optional().isString().isURL(),
+    body("blog").optional().isURL(),
     body("bio").optional().isString(),
   ],
   validate,

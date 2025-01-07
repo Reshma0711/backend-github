@@ -4,9 +4,9 @@ import dotenv from "dotenv";
 dotenv.config();
 import userRoutes from "./routes/user.routes.js";
 import { dbConnect } from "./config/database.js";
-
+dbConnect()
 const app = express();
-const port = 4700;
+const port = process.env.PORT;
 
 app.use(cors());
 app.use(express.json());
